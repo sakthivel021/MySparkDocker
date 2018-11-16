@@ -26,5 +26,5 @@ WORKDIR /opt/spark
 #SETTING ENVIRONMENT VARIABLES
 ENV SPARK_HOME=/opt/spark
 RUN echo "export HADOOP_CONF_DIR=/opt/spark/hadoop/etc/haddop" >> spark-env.sh
-RUN $SPARK_HOME/sbin/start-master.sh 
-RUN $SPARK_HOME/sbin/start-slave.sh http://localhost:7077
+#RUN $SPARK_HOME/sbin/start-master.sh 
+#RUN $SPARK_HOME/sbin/start-slave.sh http://localhost:7077

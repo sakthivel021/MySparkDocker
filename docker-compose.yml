@@ -1,0 +1,19 @@
+version: "3"
+services:
+  master:
+    build: .
+    command: sh /opt/spark/sbin/start-master.sh
+    ports:
+      - 8080:8080
+      - 8081:8081
+      - 7077:7077
+      - 4040:4040
+  worker:
+    build: .
+    command: sh /opt/spark/sbin/start-slave.sh spark://172.17.0.2:7077
+    ports:
+      - 9080:8080
+      - 9081:8081
+      - 9077:7077
+      - 9040:4040
+
